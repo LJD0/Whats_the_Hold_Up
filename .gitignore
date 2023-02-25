@@ -128,3 +128,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 .DS_Store
+Resources/Airlines.csv
+Resources/Complete_Airlines.csv
+Resources/Complete_Cancelled_Flights.csv
+Resources/Complete_Delayed_Flights.csv
+Resources/Complete_Flights.csv
+Resources/Complete_Airports.csv
