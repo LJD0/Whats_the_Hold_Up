@@ -27,7 +27,7 @@ This analysis looks at approx 30 million flights to determine just that.
 Cancelled flights make up approx. 2.7% of all the flights
 Delays make up approx. 40.7%.
 
-image here
+![category_breakdown](https://github.com/LJD0/Whats_the_Hold_Up/blob/main/Resources/images/category_breakdown.png)
 
 Cancels were classified into four categories:
 
