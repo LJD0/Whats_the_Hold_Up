@@ -1,33 +1,46 @@
-![plane.png](https://github.com/Adam-Warrick/Causes_of_Flight_Delays_and_Cancellations/blob/main/Resources/images/plane.png)
+![plane](https://github.com/Adam-Warrick/Causes_of_Flight_Delays_and_Cancellations/blob/main/Resources/images/plane.png)
 
 ## Rememener your last flight?
 
-    How long did you wait in the terminal? How long on the runway? It always feels like forever. Some of us have been unfortunate enough to have our flights cancelled. This analysis  aims to help identify factors that keep you held up on the plane and the airlines and airports that delays and concellations happen with the most.
+How long did you wait in the terminal? How long on the runway?
 
-## [Flights](https://www.kaggle.com/datasets/robikscube/flight-delay-dataset-20182022) Analysis
+It always feels like forever. Some of us have been unfortunate enough to have our flights cancelled.
 
-- This study uses all of the csv files in the 'raw' folder from the flight data linked above.
-- Section 1 of the Notebook imports and selects the relevant columns for the analysis from those csvs
-- Section 2 Cleans this data to be used in the database
-- Section 3 will load to the database
+This analysis aims to identify factors that keep you held up on the plane and the airlines and airports that delays and concellations happen with the most.
+
+## Analysis of [flight data](https://www.kaggle.com/datasets/robikscube/flight-delay-dataset-20182022) from Jan 2018 through Jul 2022
+
+Analysis Notebook Outline
+
+- Section 1 imports and selects the relevant columns for analysis from the Kaggle Data
+- Section 2 Cleans this data to be used in the tables
+- Section 3 generates vizualizations of the airline and airport data
 - Section 4 preps the data to be analyzed in the Balanced Random forest Classifier
-
   - This model was used to analyze which features most impacted a flights punctuality
-
-- Section 5 executes the ML model and returns analytics.
-- Section 6 generates the vizualizations you will see below
+- Section 5 executes the ML model
 
 ### First look at flights
 
-Total flights
+The biggest question to answer is what is the hold up?
+This analysis looks at approx 30 million flights to determine just that.
 
-Total dealys/ cancellations (maybe averge here too)
+Cancelled flights make up approx. 2.7% of all the flights
+Delays make up approx. 40.7%.
 
-percentage delays/cancellation
+image here
 
-### Delay and cancellation types
+Cancels were classified into four categories:
 
-- Highest % cause of delays/cancellations
+- Carrier
+- NAS (National Airspace System)
+- Weather
+- Security
+
+Delays were classified similarly with 'Late Aircrafts' included as a feature
+
+As the data suggests, The carrier you fly with with determine if you are delayed greatly.
+
+Conversly, weather and security greatly determine the likelihood of a flight being cancelled
 
 ### Airports
 
