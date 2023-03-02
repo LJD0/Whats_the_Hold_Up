@@ -36,7 +36,7 @@ Cancels were classified into four categories:
 - Weather
 - Security
 
-Delays were classified similarly with 'Late Aircrafts' included as a feature
+Delays were classified similarly with 'Late Aircrafts' included as an additional feature
 
 As the data suggests, The carrier you fly with with determine if you are delayed greatly.
 
@@ -44,7 +44,56 @@ Conversly, weather and security greatly determine the likelihood of a flight bei
 
 ### Airports
 
+Becasue weather reasons make up such a large perentage of the cancellation causes looking at airport data is our next step.
+
+[airport count]
+
+The data shows that the number of times an airport is flown into and out of are roughly the same.
+The top five airports each represent a different part of the country seeming to diprove that weather hinders air travel.
+
+[airport cancel count]
+
+The airports with the highest number of cancellations correlate with the most flown to and from airports.
+Seeing Denver and Chicago in the top cancelled airports lends credence to weather being a factor.
+
+[airport delay count]
+
+Delays seem to follow the same pattern of airports. Although a shuffle does occur
+Denver moving up the list of departure delays could be weather related. When each airport gets flown out of or flown to will be analyzed below.
+
 ### Airlines
+
+While knowing which airports have more hinderances can limit our hold ups, destination alone cant always be the deciding factor of air travel.
+Looking at who we can fly with may lend more insight into how to get from A to B the quickest.
+
+[airline total count]
+
+Soutwest Airlines has been the flight operator of choice for the time of our dataset; greatly outnumbering the next airlines in total flights.
+Above,quantity of flights correlated with quantity of delays and cancellations. We will see if that holds true within airlines as well.
+
+[airline cancel delay count]
+
+It comes as no surprise that the correlation holds true. Southwest has the most delays and cancellations.
+Looking at percentages of delays and cancellations may prove more helpful.
+
+[airline cancel percentage]
+
+Cancellations make up such a small percentage of overall flights it is hard to extrapolate useful information. But the information is worth viewing.
+
+[airline delay percentage]
+
+Delay percentages is where we are best able to gain some inferences.
+As shown, most of the top airlines have over 40% of their flights delayed.
+This information blurs the line between expectations of punctuality and expectation of delays.
+The percentage of total flights delayed was 40.7%, using that as a benchmark, we are able to determine which airlines may not have as many hold ups.
+Southwest again leads the charge with a near 50% delay chance.
+Choosing to fly with an airline that falls below that 40.7% benchmark, like Delta Airlines, or SkyWest, could be a decision that saves you time in the long run.
+
+Unfortunately the percentage of flights that get delayed is so high that we can all almost expect to have delays of some kind on our travels. Looking at how long each airlines average delay is may also help to inform our travelling schedules.
+
+[airline_average_delay]
+
+While this data is shown as an representation of how long each delay can be from each operator, it is worth noting that Southwest does not make the top ten airlines in terms of delay time, even though they are number one in number of cancels and delays by a large margin.
 
 ## Summary
 
