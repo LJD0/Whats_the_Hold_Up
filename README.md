@@ -1,6 +1,6 @@
 ![plane](https://github.com/Adam-Warrick/Causes_of_Flight_Delays_and_Cancellations/blob/main/Resources/images/plane.png)
 
-## Rememener your last flight?
+## Remember your last flight?
 
 How long did you wait in the terminal? How long on the runway?
 
@@ -95,20 +95,41 @@ Unfortunately the percentage of flights that get delayed is so high that we can 
 
 While this data is shown as an representation of how long each delay can be from each operator, it is worth noting that Southwest does not make the top ten airlines in terms of delay time, even though they are number one in number of cancels and delays by a large margin.
 
-## Summary
+## Can we predict hold ups?
 
-    Here will discuss the outcome of the ML model in comparison to help better identify underlying causes of delays and cancels.
+Looking at our data through a different lens could prove useful. being able to gain more insight into which aspects of a flight best predict its delay or cancellation.
+The lens being Machine Learning
 
-(To determine an answer to the primary question that encapsulates all features of the data and how they may interact to lead to a flight being delayed or cancelled we used a classification model to predict outcomes into 3 target classes. Since the focus is understanding what are the main causes that determine flight outcomes a model that is hierarchical in its a structure was desired, and due to the number of features being used ultimately a random forest classifier was chosen. Exploratory data analysis found that while the on-time and delayed classes were similar in sample size, cancellations accounted for a small proportion of the data, so to counteract this we chose Imblearn's Balanced Random Forest Classifier that randomly under-samples the data to form decision trees.)
+Using a classification model to predict outcomes into 3 target classes: On Time, Delayed, or Cancelled, could help ascertain what the main causes that determine flight outcomes.
+A model that is hierarchical in its a structure, due to the number of features being used, was deemed necessary, and ultimately a random forest classifier was chosen. Previously we found that while the on-time and delayed classes were similar in sample size, cancellations accounted for a small proportion of the data, so to counteract this we chose Imblearn's Balanced Random Forest Classifier that randomly under-samples the data to form decision trees.)
 
-list of the features and their importances. (screenshot)
+The initial run of the model using all the features was about 74% accurate
 
-### What we can do
+![first model run](https://github.com/LJD0/Whats_the_Hold_Up/blob/main/Resources/images/MLOutput_all.png)
 
-discuss airports and airlines. and underlying causes
+In an attempt to aid the model, the features that had low importances were removed, both iterations of this process were unsuccesful, with the accuracy dropping each time.
 
-discuss how model did or didnt relate to the outcomes of the data
+[MLO limit1] [MLO limit2]
 
-(The biggest surprise the model gave is the Day of the month (irrespective of which month it is) is the 2nd highest ranked feature. Viewing this as a time series there does seem to be something to the flucations in flight outcomes when the days are aggregated for the entire period under examination, however with the data currently available to us and the scope of this analysis the causes for those fluctuations are indeterminable.
+A model was run with features that a passenger would have a knowledge of. This model also wasnt successful.
 
-    Based on the results many more questions arise that are worth exploring. With weather being the top factor, what weather patterns lead to delays or cancellations? This factor is likely closely linked with the 4th and 5th features the model deemed important, the destination and origin airports. Why is day such a huge factor? We envision another important feature not avaiable in this data set, the number of seats sold per flight, being a large factor both overall and one that might relate to this. For the time being, consumers can make reasonable assumptions on which airlines they risk a delay or cancellation riding with, and which airports they may be delayed flying out of:)
+[MLO passenger]
+
+
+Even without the success of the models' predictions, the feature importances showed an interesting trend with "Day" consistently being listed as a top feature.
+This is a detail that while was included in the training of the model we had deemed irrelevant, but left in anyway. The Day of the month is not a detail that one would consider having any significance in the outcome of a delay, as the First of July and the first of January have polar opposite weather conditions; each suggesting a differnet outcome.
+This led to the conclusion this feature could be causing our model to be overfit and thus the innaccuracy.
+Running the model without "Day" was attempted with incresingly worse results.
+Attemptnig to remove dates and times in any format also proved equally unhelpful, if not worse.
+
+[ML subset1] [ML subset2]
+
+
+### What we can do?
+
+
+    Based on the results, there are more questions worth exploring. With weather being the top factor, what weather patterns lead to delays or cancellations? This factor is likely closely linked with why day is such a heavily weighted feature in our models. Another important feature not avaiable in this data set, the number of seats sold per flight, might be a large unnacounted for factor as well.
+
+For the time being, consumers can make reasonable assumptions on which airlines they risk a delay or cancellation riding with, and which airports they may be delayed flying out of based on the percentage of occurences. 
+
+Unfortunately, with how often flights are delayed, it would seem that any expected departure or arrival times will just become wider and wider approximations.
