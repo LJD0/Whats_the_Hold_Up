@@ -109,11 +109,11 @@ The initial run of the model using all the features was about 74% accurate
 
 In an attempt to aid the model, the features that had low importances were removed, both iterations of this process were unsuccesful, with the accuracy dropping each time.
 
-[MLO limit1] [MLO limit2]
+![MLO limit1](https://github.com/LJD0/Whats_the_Hold_Up/blob/main/Resources/images/MLOutput_limit1.png) ![MLO limit2](https://github.com/LJD0/Whats_the_Hold_Up/blob/main/Resources/images/MLOutput_limit2.png)
 
 A model was run with features that a passenger would have a knowledge of. This model also wasnt successful.
 
-[MLO passenger]
+![MLO passenger](https://github.com/LJD0/Whats_the_Hold_Up/blob/main/Resources/images/MLOutput_passenger.png)
 
 
 Even without the success of the models' predictions, the feature importances showed an interesting trend with "Day" consistently being listed as a top feature.
@@ -122,7 +122,7 @@ This led to the conclusion this feature could be causing our model to be overfit
 Running the model without "Day" was attempted with incresingly worse results.
 Attemptnig to remove dates and times in any format also proved equally unhelpful, if not worse.
 
-[ML subset1] [ML subset2]
+![ML subset1](https://github.com/LJD0/Whats_the_Hold_Up/blob/main/Resources/images/MLOutput_subset1.png) ![ML subset2](https://github.com/LJD0/Whats_the_Hold_Up/blob/main/Resources/images/MLOutput_subset2.png)
 
 
 ### What we can do?
