@@ -10,14 +10,13 @@ This analysis aims to identify factors that keep you held up on the plane and th
 
 ## Analysis of [flight data](https://www.kaggle.com/datasets/robikscube/flight-delay-dataset-20182022) from Jan 2018 through Jul 2022
 
-Analysis Notebook Outline
+Analysis [Notebook](https://github.com/LJD0/Whats_the_Hold_Up/blob/main/Whats_the_Hold_up.ipynb) Outline
 
 - Section 1 imports and selects the relevant columns for analysis from the Kaggle Data
-- Section 2 Cleans this data to be used in the tables
-- Section 3 generates vizualizations of the airline and airport data
-- Section 4 preps the data to be analyzed in the Balanced Random forest Classifier
-  - This model was used to analyze which features most impacted a flights punctuality
-- Section 5 executes the ML model
+- Section 2 cleans this data to be used in the tables
+- Section 3 preps the data to be analyzed in the Balanced Random forest Classifier
+- Section 4 executes the ML Model
+- Section 5 generates vizualizations of the airline and airport data
 
 ### First look at flights
 
@@ -115,7 +114,6 @@ A model was run with features that a passenger would have a knowledge of. This m
 
 ![MLO passenger](https://github.com/LJD0/Whats_the_Hold_Up/blob/main/Resources/images/MLOutput_passenger.png)
 
-
 Even without the success of the models' predictions, the feature importances showed an interesting trend with "Day" consistently being listed as a top feature.
 This is a detail that while was included in the training of the model we had deemed irrelevant, but left in anyway. The Day of the month is not a detail that one would consider having any significance in the outcome of a delay, as the First of July and the first of January have polar opposite weather conditions; each suggesting a differnet outcome.
 This led to the conclusion this feature could be causing our model to be overfit and thus the innaccuracy.
@@ -124,11 +122,10 @@ Attemptnig to remove dates and times in any format also proved equally unhelpful
 
 ![ML subset1](https://github.com/LJD0/Whats_the_Hold_Up/blob/main/Resources/images/MLOutput_subset1.png) ![ML subset2](https://github.com/LJD0/Whats_the_Hold_Up/blob/main/Resources/images/MLOutput_subset2.png)
 
-
 ### What we can do?
 
 Based on the results, there are more questions worth exploring. With weather being the top factor, what weather patterns lead to delays or cancellations? This factor is likely closely linked with why day is such a heavily weighted feature in our models. Another important feature not avaiable in this data set, the number of seats sold per flight, might be a large unnacounted for factor as well.
 
-For the time being, consumers can make reasonable assumptions on which airlines they risk a delay or cancellation riding with, and which airports they may be delayed flying out of based on the percentage of occurences. 
+For the time being, consumers can make reasonable assumptions on which airlines they risk a delay or cancellation riding with, and which airports they may be delayed flying out of based on the percentage of occurences.
 
 Unfortunately, with how often flights are delayed, it would seem that any expected departure or arrival times will just become wider and wider approximations.
