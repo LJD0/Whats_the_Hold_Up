@@ -127,8 +127,7 @@ Attemptnig to remove dates and times in any format also proved equally unhelpful
 
 ### What we can do?
 
-
-    Based on the results, there are more questions worth exploring. With weather being the top factor, what weather patterns lead to delays or cancellations? This factor is likely closely linked with why day is such a heavily weighted feature in our models. Another important feature not avaiable in this data set, the number of seats sold per flight, might be a large unnacounted for factor as well.
+Based on the results, there are more questions worth exploring. With weather being the top factor, what weather patterns lead to delays or cancellations? This factor is likely closely linked with why day is such a heavily weighted feature in our models. Another important feature not avaiable in this data set, the number of seats sold per flight, might be a large unnacounted for factor as well.
 
 For the time being, consumers can make reasonable assumptions on which airlines they risk a delay or cancellation riding with, and which airports they may be delayed flying out of based on the percentage of occurences. 
 
